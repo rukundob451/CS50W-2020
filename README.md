@@ -3,7 +3,7 @@ My code from following the lectures at the [Harvard Web Programming Course CS50W
 
 CS50W is CS50's Web Programming with Python and JavaScript course. My goal is to gain "hands-on" coding experience by working the examples explained in the lectures.  I want to develop a deep understanding of Web programming, going much further than any particular technology, but more like the "philosophy" of the Web. I have learned, over the course of my career, that there's no better way of learning programming than getting my hands dirty.
 
-Although only Harvard students can earn register for credit, [anyone with an Internet connection can view the course materials for free](https://cs50.edx.org/web). 
+Although only Harvard students can register for credit, [anyone with an Internet connection can view the course materials for free](https://cs50.edx.org/web). 
 
 Slides and source code at https://cs50.harvard.edu/web.
 
