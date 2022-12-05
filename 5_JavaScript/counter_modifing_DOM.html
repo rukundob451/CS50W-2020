@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+<title>Count Calling alert function</title>
+    <script>
+
+        let counter = 0;
+
+        function count() {
+            counter++;
+            document.querySelector('h1').innerHTML = counter;
+            document.querySelector('button').value = counter;
+            if (counter % 10 === 0) {
+                alert(`The count is now ${counter}.`);
+            }
+        }
+        // update the button text in the DOM - no need to call function
+        // document.querySelector('button').value = counter;
+    </script>
+</head>
+    <body>
+        <h1>Count</h1>
+        <button onclick="count()">Count</button>
+    </body>
+</html>
