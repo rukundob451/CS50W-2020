@@ -2,21 +2,21 @@
 <html lang="EN">
     <head>
         <title>Hello Goodbye  </title>
-        <script>
-            function hello() {
-                const heading = doument.querySelector('h1');
-                alert(heading);
-                if (heading.innerHTML == 'Hello!') {
-                    document.querySelector('h1').innerHTML =  "Goodbye!";   
-                } else {
-                    document.querySelector('h1').innerHTML =  "Hello!";
-                }
-            }  
-
-        </script>
+        
     </head>
     <body>
         <h1>Hello!</h1>
         <button onclick="hello()">Change the heading</button>
     </body>
+    <script>
+        function hello() {
+            const heading = doument.querySelector('h1');
+            alert(heading);
+            if (heading.innerHTML == 'Hello!') {
+                document.querySelector('h1').innerHTML =  "Goodbye!";   
+            } else {
+                document.querySelector('h1').innerHTML =  "Hello!";
+            }
+        }  
+    </script>
 </html>
