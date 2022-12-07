@@ -1,0 +1,1 @@
+SELECT * FROM flights WHERE origin = "New York"

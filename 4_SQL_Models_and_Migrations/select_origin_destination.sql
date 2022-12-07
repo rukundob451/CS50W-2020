@@ -1,0 +1,1 @@
+SELECT origin, destination FROM flights;

@@ -1,0 +1,52 @@
+
+
+# Querying for everything within flights (Which is now empty)
+
+sqlite> SELECT * FROM flights;
+
+# Adding one flight
+sqlite> INSERT INTO flights
+   ...>     (origin, destination, duration)
+   ...>     VALUES ("New York", "London", 415);
+
+# Checking for new information, which we can now see
+sqlite> SELECT * FROM flights;
+1|New York|London|415
+
+# Adding some more flights
+sqlite> INSERT INTO flights (origin, destination, duration) VALUES ("Shanghai", "Paris", 760);
+sqlite> INSERT INTO flights (origin, destination, duration) VALUES ("Istanbul", "Tokyo", 700);
+sqlite> INSERT INTO flights (origin, destination, duration) VALUES ("New York", "Paris", 435);
+sqlite> INSERT INTO flights (origin, destination, duration) VALUES ("Moscow", "Paris", 245);
+sqlite> INSERT INTO flights (origin, destination, duration) VALUES ("Lima", "New York", 455);
+
+# Querying this new information
+sqlite> SELECT * FROM flights;
+1|New York|London|415
+2|Shanghai|Paris|760
+3|Istanbul|Tokyo|700
+4|New York|Paris|435
+5|Moscow|Paris|245
+6|Lima|New York|455
+
+# Changing the settings to make output more readable
+sqlite> .mode columns
+sqlite> .headers yes
+
+# Querying all information again
+sqlite> SELECT * FROM flights;
+id          origin      destination  duration
+----------  ----------  -----------  ----------
+1           New York    London       415
+2           Shanghai    Paris        760
+3           Istanbul    Tokyo        700
+4           New York    Paris        435
+5           Moscow      Paris        245
+6           Lima        New York     455
+
+# Searching for just those flights originating in New York
+sqlite> SELECT * FROM flights WHERE origin = "New York";
+id          origin      destination  duration
+----------  ----------  -----------  ----------
+1           New York    London       415
+4           New York    Paris        435
