@@ -4,4 +4,4 @@ def compute_sum(n):
 
 num = int(input(("n: ")))  # input returns a string...must convert to int
 # compute_sum returns float...need to convert to int to get answer
-print(compute_sum(num))  # format to 3 decimal places
+print(compute_sum(num))  
