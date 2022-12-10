@@ -4,4 +4,4 @@ my_list = [12, 24, 35, 70, 88, 120, 155]
 result = [value for i, value in enumerate(my_list) if i not in (0, 4, 5)]
 
 # print the result
-print(result) # [24, 35, 70, 155]
+print(result)  # [24, 35, 70, 155]
