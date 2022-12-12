@@ -1,7 +1,9 @@
-# Import the necessary libraries
 import sys
-from Cryptography.PublicKey
-import random
+from cryptography.fernet import Fernet
+key = Fernet.generate_key()
+cipher_suite = Fernet(key)
+cipher_text = cipher_suite.encrypt("This example is used to demonstrate cryptography module")
+plain_text = cipher_suite.decrypt(cipher_text)
 
 # Read the Reference ID from the command line
 if len(sys.argv) < 2:
@@ -15,8 +17,7 @@ if not reference_id.isalnum() or len(reference_id) != 12:
     sys.exit()
 
 # Generate a unique public and private key pair for the user
-random_generator = random() * 100
-key = RSA.generate(2048, random_generator)
+random_generator = int(random * 10)
 
 # Store the private key on the user's device
 private_key = key.export_key()
